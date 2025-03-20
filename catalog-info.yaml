@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: dwms3ddz5-python-gitops
+  description: This is GitOps manifest for dwms3ddz5-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=dwms3ddz5-python
+    backstage.io/kubernetes-id: dwms3ddz5-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: dwms3ddz5-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:dwms3ddz5-python
